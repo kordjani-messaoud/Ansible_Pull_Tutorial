@@ -1,0 +1,7 @@
+---
+- name: install packages
+  dnf:
+          name:
+                  - tmux
+                  - mc
+          state: latest
