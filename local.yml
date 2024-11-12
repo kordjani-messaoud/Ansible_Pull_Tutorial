@@ -1,8 +1,6 @@
----
 - hosts: localhost
   connection: local
   become: true
-
 
   pre_task:
           - name: update repositories
@@ -10,5 +8,6 @@
                     update: yes
                     update_cache: yes
                     changed_when: falst
+
   task:
           - include: task/packages.yml
