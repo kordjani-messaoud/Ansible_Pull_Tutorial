@@ -2,13 +2,11 @@
 - hosts: localhost
   connection: local
   become: true
-
-  pre_task:
+  pre_tasks:
           - name: update repositories
             dnf:
-                    update: yes
+                    update_only: yes
                     update_cache: yes
-                    changed_when: falst
-
-  task:
-          - include: task/packages.yml
+            changed_when: false
+  tasks:
+          - include: tasks/packages.yml
