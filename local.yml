@@ -9,4 +9,4 @@
                     update_cache: yes
             changed_when: false
   tasks:
-          - include: tasks/packages.yml
+          - include_tasks: tasks/packages.yml
